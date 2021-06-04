@@ -18,6 +18,12 @@ const renderJson = (json) => {
    studioTitleEn.textContent = studio['name-en'];
    studioDiv.appendChild(studioTitle);
    studioDiv.appendChild(studioTitleEn);
+   const studioImage = document.createElement("img");
+   studioImage.id = studio['name-ja'];
+   studioImage.className = 'studio-image';
+   studioImage.src = studio['photo1'];
+   studioImage.alt ='スタジオの写真';
+   studioDiv.appendChild(studioImage)
    document.getElementById('studios').appendChild(studioDiv);
  });
   document.getElementById('result').textContent = JSON.stringify(json, null, 2);

@@ -12,10 +12,6 @@ body {
     color: #ccc;
     font-size: 1rem;
     text-align: center;
-    background-image:url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nihonsekkei.co.jp%2Fprojects%2F5444%2F&psig=AOvVaw1i38N4-cgtTpYpAwXMMYdm&ust=1621056623446000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMCZrtS4yPACFQAAAAAdAAAAABAD");
-    background-repeat: no-repeat;
-    background-position:50% 50%;
-    background-size:contain;
   }
   #studios > div {
     float:left;
@@ -26,6 +22,7 @@ body {
     background: #f8f8f8;
     min-height: 3em;
     text-align: center;
+    background-image: studio-image;
   }
   .studio-title {
     font-weight: bold;
