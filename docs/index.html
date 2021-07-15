@@ -1,21 +1,31 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ja" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8">
+  <title>Kaleidoscope-RyoKuki</title>
+  <link rel="stylesheet" href="./style.css">
 
-  <title>kaleidoscope/test</title>
-
-  <meta name="viewport" content="width=device-width">
-
-  <link rel="stylesheet" media="screen" href="style.css" >
-
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script type="text/javascript" src="style.js"></script>
 </head>
-
 <body>
-  <div class="kaleidoscope">
-  </div>
+<!-- partial:index.partial.html -->
+<div class="container"> 
+  <div class="pie">              
+    <div class="pie__corner">
+      <div class="pie__container">
+        <div class="pie__piece"></div>
+      </div>                    
+    </div>                  
+  </div> 
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script  src="./style.js"></script>
+
+<svg>
+  <clipPath id="equitri" clipPathUnits="objectBoundingBox">
+    <polygon points=".5 0, 0 .86, 1 .866, .5 0" />
+  </clipPath>
+</svg>
+
 </body>
 </html>

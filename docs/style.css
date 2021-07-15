@@ -1,389 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
 body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgb(1, 1, 1);
-  font-family: sans serif;
-  font-size: 10pt;
+  background: #000;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
 }
 
-.kaleidoscope {
+.container {
+  margin: 2rem;
+  min-height: 10000vh;
+  overflow: hidden;
+}
+
+.pie {
+  position: fixed;
+  left: 50%;
+  top: 0%;
+  min-width: 100%;
+  transform: translateX(-125px);
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  /* border-radius: 0rem; */
+  overflow: hidden;
+  transform-origin: top center;
+}
+.pie__corner {
+  -webkit-clip-path: polygon(50% 0,0 86.6%, 100% 86.6%, 50% 0);
+  clip-path: url(#equitri);
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  transform-origin: top center;
+  /* border-radius: 0rem; */
+  
+}
+
+.pie__corner:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.pie__corner:nth-child(2) {
+  transform: rotate(0deg) scaleY(-1) translateY(-180px);
+}
+
+.pie__corner:nth-child(3) {
+  transform: rotate(0deg) translateY(-70px);
+}
+
+.pie__corner:nth-child(4) {
+  transform: rotate(0deg) scaleY(-1) translateY(-110px);
+}
+
+.pie__corner:nth-child(5) {
+  transform: rotate(-120deg) translateY(285px) translatex(494px);
+}
+
+.pie__corner:nth-child(6) {
+  transform: rotate(120deg) scaleY(-1) translateY(-411px) translatex(-710px);
+}
+
+
+/* .tile{
+  -webkit-clip-path: polygon(50% 0,0 86.6%, 100% 86.6%, 50% 0);
+  clip-path: url(#equitri);
+  transform: rotate(0deg);
+} */
+
+.pie__container {
+  position: absolute;
+  width: 37.5rem;
+  height: 75rem;
+  top: 100%;
+  left: 0;
+  display: block;
+  transform: translate(-50%, -50%)
+}
+.pie__piece {
+  
   width: 100%;
   height: 100%;
+  background-image: url("sample2.jpg");
+  background-repeat:repeat;
+  background-position: 50% 50%;
 }
 
-.kaleidoscope .tile {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 0;
-  overflow: hidden;
-  height: 500px;
-  width: 50%;
-  transform-origin: right top;
-}
-
-.kaleidoscope .tile .image {
-  position: relative;
-  top: 0;
-  left: 100%; /* 100% */
-  height: 250px;
-  width: 500px;
-  background-image: url(sample.jpg);
-  transform-origin: left top
-}
-
-.kaleidoscope.n6 .tile {
-  display: block
-}
-
-.kaleidoscope.n6 .tile.t0 {
-  transform: rotate(0deg)
-}
-
-.kaleidoscope.n6 .tile.t1 {
-  transform: scale(-1, 1) rotate(0deg)
-}
-
-.kaleidoscope.n6 .tile.t2 {
-  transform: rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t3 {
-  transform: scale(-1, 1) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t4 {
-  transform: rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t5 {
-  transform: scale(-1, 1) rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t6 {
-  transform: rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t7 {
-  transform: scale(-1, 1) rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t8 {
-  transform: rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t9 {
-  transform: scale(-1, 1) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t10 {
-  transform: rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t11 {
-  transform: scale(-1, 1) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t12 {
-  transform: rotate(360deg)
-}
-
-/* right */
-.kaleidoscope.n6 .tile.t13 {
-  transform: translateX(500px) scale(-1, 1) rotate(0deg)
-}
-
-.kaleidoscope.n6 .tile.t14 {
-  transform: translateX(500px) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t15 {
-  transform: translateX(500px) scale(-1, 1) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t16 {
-  transform: translateX(500px) rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t17 {
-  transform: translateX(500px) scale(-1, 1) rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t18 {
-  transform: translateX(500px) rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t19 {
-  transform: translateX(500px) scale(-1, 1) rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t20 {
-  transform: translateX(500px) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t21 {
-  transform: translateX(500px) scale(-1, 1) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t22 {
-  transform: translateX(500px) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t23 {
-  transform: translateX(500px) scale(-1, 1) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t24 {
-  transform: translateX(500px) rotate(360deg)
-}
-
-/* left */
-.kaleidoscope.n6 .tile.t25 {
-  transform: translateX(-500px) scale(-1, 1) rotate(0deg)
-}
-
-.kaleidoscope.n6 .tile.t26 {
-  transform: translateX(-500px) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t27 {
-  transform: translateX(-500px) scale(-1, 1) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t28 {
-  transform: translateX(-500px) rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t29 {
-  transform: translateX(-500px) scale(-1, 1) rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t30 {
-  transform: translateX(-500px) rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t31 {
-  transform: translateX(-500px) scale(-1, 1) rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t32 {
-  transform: translateX(-500px) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t33 {
-  transform: translateX(-500px) scale(-1, 1) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t34 {
-  transform: translateX(-500px) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t35 {
-  transform: translateX(-500px) scale(-1, 1) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t36 {
-  transform: translateX(-500px) rotate(360deg)
-}
-
-/* right-up */
-.kaleidoscope.n6 .tile.t37 {
-  transform: translateX(250px) translateY(-433px) scale(-1, 1) rotate(0deg)
-}
-
-.kaleidoscope.n6 .tile.t38 {
-  transform: translateX(250px) translateY(-433px) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t39 {
-  transform: translateX(250px) translateY(-433px) scale(-1, 1) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t40 {
-  transform: translateX(250px) translateY(-433px) rotate(120deg)
-}
 
-.kaleidoscope.n6 .tile.t41 {
-  transform: translateX(250px) translateY(-433px) scale(-1, 1) rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t42 {
-  transform: translateX(250px) translateY(-433px) rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t43 {
-  transform: translateX(250px) translateY(-433px) scale(-1, 1) rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t44 {
-  transform: translateX(250px) translateY(-433px) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t45 {
-  transform: translateX(250px) translateY(-433px) scale(-1, 1) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t46 {
-  transform: translateX(250px) translateY(-433px) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t47 {
-  transform: translateX(250px) translateY(-433px) scale(-1, 1) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t48 {
-  transform: translateX(250px) translateY(-433px) rotate(360deg)
-}
-
-/* left-up */
-.kaleidoscope.n6 .tile.t49 {
-  transform: translateX(-250px) translateY(-433px) scale(-1, 1) rotate(0deg)
-}
-
-.kaleidoscope.n6 .tile.t50 {
-  transform: translateX(-250px) translateY(-433px) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t51 {
-  transform: translateX(-250px) translateY(-433px) scale(-1, 1) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t52 {
-  transform: translateX(-250px) translateY(-433px) rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t53 {
-  transform: translateX(-250px) translateY(-433px) scale(-1, 1) rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t54 {
-  transform: translateX(-250px) translateY(-433px) rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t55 {
-  transform: translateX(-250px) translateY(-433px) scale(-1, 1) rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t56 {
-  transform: translateX(-250px) translateY(-433px) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t57 {
-  transform: translateX(-250px) translateY(-433px) scale(-1, 1) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t58 {
-  transform: translateX(-250px) translateY(-433px) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t59 {
-  transform: translateX(-250px) translateY(-433px) scale(-1, 1) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t60 {
-  transform: translateX(-250px) translateY(-433px) rotate(360deg)
-}
-
-/* right-down */
-.kaleidoscope.n6 .tile.t61 {
-  transform: translateX(250px) translateY(433px) scale(-1, 1) rotate(0deg)
-}
-
-.kaleidoscope.n6 .tile.t62 {
-  transform: translateX(250px) translateY(433px) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t63 {
-  transform: translateX(250px) translateY(433px) scale(-1, 1) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t64 {
-  transform: translateX(250px) translateY(433px) rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t65 {
-  transform: translateX(250px) translateY(433px) scale(-1, 1) rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t66 {
-  transform: translateX(250px) translateY(433px) rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t67 {
-  transform: translateX(250px) translateY(433px) scale(-1, 1) rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t68 {
-  transform: translateX(250px) translateY(433px) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t69 {
-  transform: translateX(250px) translateY(433px) scale(-1, 1) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t70 {
-  transform: translateX(250px) translateY(433px) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t71 {
-  transform: translateX(250px) translateY(433px) scale(-1, 1) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t72 {
-  transform: translateX(250px) translateY(433px) rotate(360deg)
-}
-
-/* left-down */
-.kaleidoscope.n6 .tile.t73 {
-  transform: translateX(-250px) translateY(433px) scale(-1, 1) rotate(0deg)
-}
-
-.kaleidoscope.n6 .tile.t74 {
-  transform: translateX(-250px) translateY(433px) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t75 {
-  transform: translateX(-250px) translateY(433px) scale(-1, 1) rotate(60deg)
-}
-
-.kaleidoscope.n6 .tile.t76 {
-  transform: translateX(-250px) translateY(433px) rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t77 {
-  transform: translateX(-250px) translateY(433px) scale(-1, 1) rotate(120deg)
-}
-
-.kaleidoscope.n6 .tile.t78 {
-  transform: translateX(-250px) translateY(433px) rotate(180deg)
-}
-
-.kaleidoscope.n6 .tile.t79 {
-  transform: translateX(-250px) translateY(433px) scale(-1, 1) rotate(180deg)
-}
 
-.kaleidoscope.n6 .tile.t80 {
-  transform: translateX(-250px) translateY(433px) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t81 {
-  transform: translateX(-250px) translateY(433px) scale(-1, 1) rotate(240deg)
-}
-
-.kaleidoscope.n6 .tile.t82 {
-  transform: translateX(-250px) translateY(433px) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t83 {
-  transform: translateX(-250px) translateY(433px) scale(-1, 1) rotate(300deg)
-}
-
-.kaleidoscope.n6 .tile.t84 {
-  transform: translateX(-250px) translateY(433px) rotate(360deg)
-}
-
-.kaleidoscope.n6 .tile .image {
-  transform: rotate(30deg)
-}
+/* .pie__piece:nth-child(2) {
+  transform: scale(1, -1);
+} */
