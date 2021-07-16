@@ -4,7 +4,7 @@ var ps = 30; //pattern speed
 //   $(".pie__corner:first-child").clone().appendTo(".pie");
 // }
 
-for (i = 1; i < 36; i++) {
+for (i = 1; i < 18; i++) {
   $(".pie__corner:first-child").clone().appendTo(".pie");
 }
 
