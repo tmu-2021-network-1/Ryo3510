@@ -7,32 +7,33 @@ body {
 
 .container {
   margin: 2rem;
-  min-height: 10000vh;
+  min-height: 5000vh;
   overflow: hidden;
 }
 
 .pie {
   position: fixed;
   left: 50%;
-  top: 0%;
+  top: 50%;
   min-width: 100%;
-  transform: translateX(-125px);
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  /* transform: translateX(-125px); */
+  /* grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; */
   /* border-radius: 0rem; */
   overflow: hidden;
   transform-origin: top center;
 }
 .pie__corner {
+  
   -webkit-clip-path: polygon(50% 0,0 86.6%, 100% 86.6%, 50% 0);
   clip-path: url(#equitri);
   width: 250px;
-  height: 250px;
+  height: 216.5px;
   overflow: hidden;
-  position: relative;
+  position: fixed;
   transform-origin: top center;
   /* border-radius: 0rem; */
-  
+  /* display: inline-block; */
 }
 
 .pie__corner:nth-child(1) {
@@ -40,25 +41,120 @@ body {
 }
 
 .pie__corner:nth-child(2) {
-  transform: rotate(0deg) scaleY(-1) translateY(-180px);
+  transform: rotate(60deg) scale(-1, 1);
 }
 
 .pie__corner:nth-child(3) {
-  transform: rotate(0deg) translateY(-70px);
+  transform: rotate(120deg);
 }
 
 .pie__corner:nth-child(4) {
-  transform: rotate(0deg) scaleY(-1) translateY(-110px);
+  transform: rotate(180deg) scale(-1, 1);
 }
 
 .pie__corner:nth-child(5) {
-  transform: rotate(-120deg) translateY(285px) translatex(494px);
+  transform: rotate(-60deg) scale(-1, 1);
 }
 
 .pie__corner:nth-child(6) {
-  transform: rotate(120deg) scaleY(-1) translateY(-411px) translatex(-710px);
+  transform: rotate(-120deg);
+} 
+
+.pie__corner:nth-child(7) {
+  transform: rotate(0deg) translate(0px, -433px);
 }
 
+.pie__corner:nth-child(8) {
+  transform: rotate(60deg) scale(-1, 1) translate(0px, -433px);
+}
+
+.pie__corner:nth-child(9) {
+  transform: rotate(120deg) translate(0px, -433px);
+}
+
+.pie__corner:nth-child(10) {
+  transform: rotate(180deg) scale(-1, 1) translate(0px, -433px);
+}
+
+.pie__corner:nth-child(11) {
+  transform: rotate(-60deg) scale(-1, 1) translate(0px, -433px);
+}
+
+.pie__corner:nth-child(12) {
+  transform: rotate(-120deg) translate(0px, -433px);
+}
+
+.pie__corner:nth-child(13) {
+  transform: rotate(0deg) translate(0px, 433px);
+}
+
+.pie__corner:nth-child(14) {
+  transform: rotate(60deg) scale(-1, 1) translate(0px, 433px);
+}
+
+.pie__corner:nth-child(15) {
+  transform: rotate(120deg) translate(0px, 433px);
+}
+
+.pie__corner:nth-child(16) {
+  transform: rotate(180deg) scale(-1, 1) translate(0px, 433px);
+}
+
+.pie__corner:nth-child(17) {
+  transform: rotate(-60deg) scale(-1, 1) translate(0px, 433px);
+}
+
+.pie__corner:nth-child(18) {
+  transform: rotate(-120deg) translate(0px, 433px);
+}
+
+.pie__corner:nth-child(19) {
+  transform: rotate(0deg) translate(375.5px, -216.5px);
+}
+
+.pie__corner:nth-child(20) {
+  transform: rotate(60deg) scale(-1, 1) translate(375.5px, -216.5px);
+}
+
+.pie__corner:nth-child(21) {
+  transform: rotate(120deg) translate(375.5px, -216.5px);
+}
+
+.pie__corner:nth-child(22) {
+  transform: rotate(180deg) scale(-1, 1) translate(375.5px, -216.5px);
+}
+
+.pie__corner:nth-child(23) {
+  transform: rotate(-60deg) scale(-1, 1) translate(375.5px, -216.5px);
+}
+
+.pie__corner:nth-child(24) {
+  transform: rotate(-120deg) translate(375.5px, -216.5px);
+}
+
+.pie__corner:nth-child(25) {
+  transform: rotate(0deg) translate(375px, 216.5px);
+}
+
+.pie__corner:nth-child(26) {
+  transform: rotate(60deg) scale(-1, 1) translate(375px, 216.5px);
+}
+
+.pie__corner:nth-child(27) {
+  transform: rotate(120deg) translate(375px, 216.5px);
+}
+
+.pie__corner:nth-child(28) {
+  transform: rotate(180deg) scale(-1, 1) translate(375px, 216.5px);
+}
+
+.pie__corner:nth-child(29) {
+  transform: rotate(-60deg) scale(-1, 1) translate(375px, 216.5px);
+}
+
+.pie__corner:nth-child(30) {
+  transform: rotate(-120deg) translate(375px, 216.5px);
+} 
 
 /* .tile{
   -webkit-clip-path: polygon(50% 0,0 86.6%, 100% 86.6%, 50% 0);
@@ -79,13 +175,7 @@ body {
   
   width: 100%;
   height: 100%;
-  background-image: url("sample2.jpg");
+  background-image: url("sample.jpg");
   background-repeat:repeat;
   background-position: 50% 50%;
 }
-
-
-
-/* .pie__piece:nth-child(2) {
-  transform: scale(1, -1);
-} */

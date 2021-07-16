@@ -1,7 +1,10 @@
 var ps = 30; //pattern speed
 
+// for (i = 1; i < 6; i++) {
+//   $(".pie__corner:first-child").clone().appendTo(".pie");
+// }
 
-for (i = 1; i < 6; i++) {
+for (i = 1; i < 30; i++) {
   $(".pie__corner:first-child").clone().appendTo(".pie");
 }
 
