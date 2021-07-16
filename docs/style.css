@@ -7,7 +7,7 @@ body {
 
 .container {
   margin: 2rem;
-  min-height: 10000vh;
+  min-height: 5000vh;
   overflow: hidden;
 }
 
