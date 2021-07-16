@@ -108,7 +108,7 @@ body {
   transform: rotate(-120deg) translate(0px, 433px);
 }
 
-.pie__corner:nth-child(19) {
+/* .pie__corner:nth-child(19) {
   transform: rotate(0deg) translate(375.5px, -216.5px);
 }
 
@@ -178,7 +178,7 @@ body {
 
 .pie__corner:nth-child(36) {
   transform: rotate(-120deg) translate(-374.5px, -216px);
-} 
+}  */
 
 /* .tile{
   -webkit-clip-path: polygon(50% 0,0 86.6%, 100% 86.6%, 50% 0);
