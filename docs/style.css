@@ -7,7 +7,7 @@ body {
 
 .container {
   margin: 2rem;
-  min-height: 5000vh;
+  min-height: 10000vh;
   overflow: hidden;
 }
 
@@ -154,6 +154,30 @@ body {
 
 .pie__corner:nth-child(30) {
   transform: rotate(-120deg) translate(375px, 216.5px);
+} 
+
+.pie__corner:nth-child(31) {
+  transform: rotate(0deg) translate(-374.5px, -216px);
+}
+
+.pie__corner:nth-child(32) {
+  transform: rotate(60deg) scale(-1, 1) translate(-374.5px, -216px);
+}
+
+.pie__corner:nth-child(33) {
+  transform: rotate(120deg) translate(-374.5px, -216px);
+}
+
+.pie__corner:nth-child(34) {
+  transform: rotate(180deg) scale(-1, 1) translate(-374.5px, -216px);
+}
+
+.pie__corner:nth-child(35) {
+  transform: rotate(-60deg) scale(-1, 1) translate(-374.5px, -216px);
+}
+
+.pie__corner:nth-child(36) {
+  transform: rotate(-120deg) translate(-374.5px, -216px);
 } 
 
 /* .tile{
